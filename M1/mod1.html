@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Secciones y líneas generales de un documento HTML5</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400' rel='stylesheet' type='text/css'>
+    <style>
+    body{
+        color: white; /* Cambia color de la fuente */
+        background-color: #456789;
+        max-width: 800px;
+        text-align: justify;
+        margin: 0 auto;
+    }
+    h1, h2, h3{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400; /* Cambia el peso de la fuente */
+        text-align:center; /* Alinea el texto horizontalmente */
+    }
+    h1{
+        background: white;
+        padding: 50px;
+        color: #456789;
+    }
+    h2{
+        border-bottom: 1px solid;
+        border-color: rgba(255,255,255,1);
+        padding: 10px;
+    }
+    h3{
+        border-bottom: 1px solid;
+        border-color: rgba(255,255,255,0.2);
+        padding: 5px;
+        margin: 20px 75px;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Secciones y líneas generales de un documento HTML5</h1>
+
+    <p>
+        La especificación HTML5 trae muchos nuevos elementos a los desarrolladores web, permitiéndoles describir la estructura de un documento web con semántica estandarizada. Este documento describe estos elementos y cómo usarlos para definir el perfil de cualquier documento.
+    </p>
+
+    <h2>Problemas resueltos por HTML5</h2>
+
+    <p>
+        La definición de la estructura de un documento en HTML 4 y su algoritmo de perfilado es muy tosco y genera numerosos problemas:
+    </p>
+
+    <ol>
+        <li>HTML5 quita la necesidad de elementos &lt;div&gt; para definir secciones semánticas sin definir valores específicos para los atributos class, introduciendo un nuevo elemento, &lt;section&gt;, el elemento de sección HTML.</li>
+
+        <li>Mezclar varios documentos es difícil: la inclusión de un sub-documento en un documento principal. Esto se resuelve en HTML5 con los elementos de seccionado (&lt;article&gt;, &lt;section&gt;, &lt;nav&gt; y &lt;aside&gt;) son siempre subsecciones de su sección ancestra más cercana.</li>
+
+        <li>HTML5 introduce el elemento &lt;hgroup&gt; que oculta todos los elementos de cabecera excepto el primero de más alto rango (por ejemplo, &lt;hgroup&gt;&lt;h1&gt;Justine&lt;/h1&gt;&lt;h2&gt;Les Malheurs de la Vertu&lt;/h2&gt;&lt;/hgroup&gt; crea el perfil 1. Justine).</li>
+
+        <li>Un documento puede tener secciones especiales conteniendo información relacionado que no es parte del flujo principal. HTML5 introduce el elemento &lt;aside&gt; permitiendo a dichas secciones no ser parte del perfil principal.</li>
+
+        <li>Hay información relacionada no al documento pero sí al sitio entero, como logos, menús, tablas de contenidos, o información de derechos de autor y notas legales. Para ese propósito, HTML5 introduce tres elementos de sección específicos: &lt;nav&gt; para colecciones de enlaces, como una tabla de contenidos, &lt;footer&gt; y &lt;header&gt; información relacionada con el sitio.</li>
+    </ol>
+
+    <p>
+        De manera más general, HTML5 trae precisión a las características de seccionado y cabecera, permitiendo a los perfiles de documento ser predecibles y usados por el navegador para mejorar la experiencia de usuario.
+    </p>
+
+    <h2>El algoritmo de perfilado de HTML5</h2>
+
+    <h3>Definiendo secciones en HTML5</h3>
+
+    <p>
+        Todo el contenido incluido dentro del elemento &lt;body&gt; es parte de una sección. Las secciones en HTML5 pueden ser anidadas. Además de la sección principal, definida por el elemento &lt;body&gt;, los límites de la sección son definidos explícita o implícitamente. La secciones definidas explícitamente son el contenido definido en las etiquetas &lt;body&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;footer&gt;, &lt;header&gt;, y &lt;nav&gt;. Nota: Cada sección puede tener su propia jerarquía de cabeceras. Por lo tanto, incluso una sección anidada puede tener un elemento &lt;h1&gt;. Consulte también Definiendo cabeceras en HTML5.
+    </p>
+
+    <h3>Ejemplo:</h3>
+
+    <pre><code>
+&lt;section&gt;
+    &lt;h1&gt;Forest elephants&lt;/h1&gt;
+    &lt;section&gt;
+        &lt;h1&gt;Introduction&lt;/h1&gt;
+        &lt;p&gt;In this section, we discuss the lesser known forest elephants.
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;Habitat&lt;/h1&gt;
+        &lt;p&gt;Forest elephants do not live in trees but among them.
+    &lt;/section&gt;
+    &lt;aside&gt;
+        &lt;p&gt;advertising block
+    &lt;/aside&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+    &lt;p&gt;(c) 2010 The Example company
+&lt;/footer&gt;
+    </code></pre>
+
+</body>
+
+</html>

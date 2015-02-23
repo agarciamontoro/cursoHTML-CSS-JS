@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Hoja de estilos para empezar con un estilo (casi) nulo -->
+    <link href="CSS/reset.css" rel="stylesheet" type="text/css" />
+
+    <!-- Tipografías usadas -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,700,400,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+
+    <!-- Hoja de estilos general -->
+    <link href="CSS/estilo.css" rel="stylesheet" type="text/css" />
+
+    <!-- Hoja de estilos para tabletas -->
+    <link media="only screen and (max-width: 1500px)" href="CSS/estilo_tableta.css" rel="stylesheet" type="text/css" />
+
+    <!-- Hoja de estilos para móvil -->
+    <link media="only screen and (max-width: 761px)" href="CSS/estilo_movil.css" rel="stylesheet" type="text/css" />
+
+    <title>Alejandro García</title>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <header>
+            <img src="DATA/foto_p.jpg" alt="Autorretrato de Alejandro" />
+            <h1>
+                Alejandro
+                <br />
+                <hr>
+                <span class="small">
+                    García Montoro
+                </span>
+            </h1>
+        </header>
+
+        <nav id="contacto">
+            <ul>
+                <li id="fb">
+                    <a href="http://www.facebook.com">Facebook</a>
+                </li>
+                <li id="tw">
+                    <a href="http://www.twitter.com">Twitter</a>
+                </li>
+                <li id="gh">
+                    <a href="https://github.com/agarciamontoro">GitHub</a>
+                </li>
+                <li id="fr">
+                    <a href="https://www.flickr.com/photos/alejandrogm/">Flickr</a>
+                </li>
+                <li id="de">
+                    <a href="http://www.demotix.com/users/alejandro-garcia-montoro/profile">Demotix</a>
+                </li>
+                <li id="ma">
+                    <a href="mailto://prueba@gmail.com">Mail</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="galeria">
+            <h2>Mis intereses</h2>
+
+            <div id="itemsGaleria">
+
+                <div class="item" id="fotografia">
+                    <h3>Fotografía</h3>
+                    <a href="https://www.flickr.com/photos/alejandrogm/">
+                        <img class="itemObject" src="https://farm5.staticflickr.com/4106/4956413251_5a5878b9c7_n.jpg" />
+                    </a>
+                </div>
+
+                <div class="item" id="programacion">
+                    <h3>Programación</h3>
+                    <a href="https://github.com/agarciamontoro">
+                        <video class="itemObject" autoplay loop>
+                            <source src="DATA/video.mp4" type=video/webm>
+                            <source src="DATA/video.webm" type=video/webm>
+                        </video>
+                    </a>
+                </div>
+
+                <div class="item" id="disenio">
+                    <h3>Diseño</h3>
+                    <object class="itemObject" type="image/svg+xml" data="DATA/dibujo.svg"></object>
+                </div>
+            </div>
+        </div>
+
+        <section id="CV">
+            <h2>Currículum Vitae</h2>
+
+            <div id="textoCV">
+
+                <h3>Experiencia</h3>
+                <p>Donec sodales lorem efficitur ligula interdum eleifend. Curabitur facilisis felis non risus scelerisque auctor. Duis ac sapien justo. Proin rhoncus consectetur nisl, vel tempus quam sodales ac. Aenean at sapien lorem. Donec efficitur suscipit tellus. Vivamus purus nisl, dictum et rhoncus vitae, gravida ut ex. Donec orci purus, bibendum eget felis nec, vulputate aliquam felis. Vestibulum efficitur a ex ac malesuada. Suspendisse rutrum ultrices vulputate. Nulla vel odio a quam dapibus viverra eget a lorem. Etiam nunc nisi, aliquet in sapien ut, ornare egestas sapien. Etiam sollicitudin nunc ac scelerisque porta. Maecenas ornare finibus sapien, eget semper ipsum pharetra ut. Nulla consectetur scelerisque est, non venenatis felis euismod at.</p>
+
+                <p>Maecenas quis dolor quis mauris lobortis condimentum. Cras sit amet ultrices turpis. Praesent convallis tempor sagittis. Aenean fermentum tellus ut lorem maximus, vitae malesuada tellus consequat. Donec scelerisque luctus dui, eget porttitor lorem eleifend nec. Duis quis volutpat elit. Nunc luctus, massa eget tincidunt luctus, tellus nibh varius magna, in tincidunt massa ex vitae ex. Sed vel consectetur velit, sit amet fermentum turpis. Fusce arcu nisl, semper volutpat mattis et, porttitor vitae orci. Proin non lorem purus. Phasellus ultrices hendrerit sodales. Mauris non dignissim nisl, ac posuere purus.</p>
+
+                <p>Donec ultrices quis orci eget auctor. Fusce eget diam risus. Suspendisse in mauris blandit ante euismod pulvinar. Nam ut quam laoreet, scelerisque nisi vel, sollicitudin lorem. Duis vel lobortis odio, nec efficitur urna. Sed et auctor erat, et iaculis nibh. Nulla non molestie mauris. Quisque hendrerit congue arcu, eu faucibus lorem euismod nec. Fusce in pharetra felis. Ut elementum, purus eu sagittis scelerisque, felis magna scelerisque urna, ac sodales lorem ipsum sed elit. Nulla volutpat sed mi eu tempor.</p>
+
+                <h3>Idiomas</h3>
+                <ul>
+                    <li class="nivel5">Lorem</li>
+                    <li class="nivel4">Ipsum</li>
+                    <li class="nivel4">Dolor</li>
+                    <li class="nivel3">Sit</li>
+                    <div class="clear"></div>
+                </ul>
+
+                <h3>Educación</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id purus aliquam, commodo ipsum dignissim, bibendum erat. Nullam accumsan vulputate neque, et ullamcorper diam varius ac. Morbi vulputate ac enim eu maximus. Nulla eget euismod lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at aliquam dolor. Donec varius elementum dolor in venenatis.</p>
+
+                <p>Fusce vel nisl mollis, fringilla purus eu, rhoncus mi. In hac habitasse platea dictumst. Nullam consequat a magna vel mollis. Nulla aliquam ornare sem sed mollis. Vestibulum et mollis nunc. In hac habitasse platea dictumst. Sed in finibus est. Vestibulum iaculis odio quis ultricies maximus.</p>
+
+            </div>
+        </section>
+
+        <div class="clear"></div>
+    </div>
+
+    <footer>Diseñado con <img src="DATA/heart.svg" alt="love"> por Alejandro</footer>
+</body>
+
+</html>

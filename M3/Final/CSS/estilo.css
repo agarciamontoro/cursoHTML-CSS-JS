@@ -1,0 +1,278 @@
+body{
+    background: white;
+    color: black;
+    font-family: 'Gentium Book Basic', serif;
+    line-height: 1.5em;
+}
+
+#wrapper {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+/***************************************************
+ ********************        ***********************
+ ******************** HEADER ***********************
+ ********************        ***********************
+ ***************************************************/
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: center;
+
+    margin: 20px 0;
+    font-family: 'Vollkorn', serif;
+    line-height: 2em;
+
+    color: #345678;
+}
+
+header>img {
+    order: 1;
+
+    width: 25%;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+header>h1{
+    order: 2;
+
+    font-size: 70px;
+    padding-bottom: 20px;
+    font-variant: small-caps;
+}
+
+hr {
+    margin-top: 7px;
+    margin-bottom: 2px;
+    border: 0;
+    height: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.small{
+    font-size: 20px;
+    font-variant: normal;
+    letter-spacing: 12px;
+    color: black;
+}
+
+/***************************************************
+*******************          ***********************
+******************* CONTACTO ***********************
+*******************          ***********************
+***************************************************/
+
+#contacto {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 60px;
+}
+
+#contacto>ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#contacto>ul>li{
+    width: 16%;
+}
+
+#contacto a {
+    display: block;
+    height: 30px;
+    text-align: center;
+    line-height: 2em;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+#contacto a:hover {
+    background: white;
+    color: #456789;
+
+    -webkit-transition: color 500ms, background-color 500ms;
+    -moz-transition: color 500ms, background-color 500ms;
+    -o-transition: color 500ms, background-color 500ms;
+    -ms-transition: color 500ms, background-color 500ms;
+    transition: color 500ms, background-color 500ms;
+}
+
+/***************************************************
+*******************           **********************
+*******************  GALERIA  **********************
+*******************           **********************
+***************************************************/
+
+#galeria{
+    /*border-right: 1px solid #ccc;
+    border-radius: 15px;*/
+    width: 20%;
+    float: left;
+}
+
+/*
+#galeria>h2{
+    text-variant: small-caps;
+    font-family: 'Vollkorn', serif;
+    text-align: center;
+    font-size: 25px;
+    color: #345678;
+}
+
+#galeria>h2>span{
+    position: relative;
+    top: -15px;
+    background: white;
+    padding: 0 25px;
+}
+*/
+#galeria h2{
+    border-bottom: 1px solid #ccc;
+    text-variant: small-caps;
+    font-family: 'Vollkorn', serif;
+    text-align: center;
+    font-size: 35px;
+    margin: 0 0 20px 0;
+    padding-bottom: 5px;
+    color: #345678;
+
+}
+
+#itemsGaleria {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Todos los hijos de #galeria */
+div.item {
+    width: 70%;
+    margin-top: 20px;
+}
+
+.itemObject{
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+div.item>h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: none;
+}
+
+.itemObject {
+    opacity: 0.4;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.itemObject:hover {
+    opacity: 1.0;
+}
+/***************************************************
+*******************           **********************
+*******************    C V    **********************
+*******************           **********************
+***************************************************/
+
+#CV{
+    width: 75%;
+    float: right;
+}
+
+#CV h2{
+    border-bottom: 1px solid #ccc;
+    text-variant: small-caps;
+    font-family: 'Vollkorn', serif;
+    text-align: right;
+    font-size: 35px;
+    margin: 0 0 20px 0;
+    padding-bottom: 5px;
+    color: #345678;
+
+}
+
+#textoCV{
+    -moz-column-count: 2;
+    -moz-column-gap: 50px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 50px;
+    text-align: justify;
+    font-weight: 300;
+}
+
+#textoCV>p {
+    margin-bottom: 30px;
+    text-indent: 2em;
+}
+
+#textoCV>h3 {
+    font-variant: small-caps;
+    color: #456789;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto 8px auto;
+    border-bottom: 1px solid #ccc;
+    width: 60%;
+}
+#textoCV li{
+    padding-left: 2em;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: 80px -45px;
+}
+
+.nivel5{
+    background-image: url(../DATA/nivel5.svg);
+}
+.nivel4{
+    background-image: url(../DATA/nivel4.svg);
+}
+.nivel3{
+    background-image: url(../DATA/nivel3.svg);
+}
+
+/***************************************************
+*******************           **********************
+*******************   FOOTER  **********************
+*******************           **********************
+***************************************************/
+
+footer{
+    width: 100%;
+    text-align: center;
+    margin-bottom:10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+footer>img{
+    height: 1.5em;
+    vertical-align: middle;
+}
+
+
+.clear{
+    clear: both;
+}

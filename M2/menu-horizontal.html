@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Menú</title>
+    <style>
+
+    /* ESTILOS COMPARTIDOS */
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0px;
+    }
+
+    a {
+        font-size: 18px;
+        font-variant: small-caps;
+        color: white;
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        background-color: #456789;
+    }
+
+    h1 {
+        color: #456789;
+        border-bottom: 1px solid #456789;
+    }
+
+    /* ESTILO MENÚ HORIZONTAL */
+
+    #horizontal {
+        max-width: 850px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #horizontal ul {
+        max-width: 828px; /* 9 elementos de 90 px de ancho con 2 pixeles de margen: 9*(90+2)=828 */
+        margin: 0 auto;
+    }
+
+    #horizontal li {
+        display: inline;
+    }
+
+    #horizontal a {
+        margin: 1px;
+        width: 70px;
+        height: 25px;
+        float: left;
+        border-bottom: 5px solid white;
+    }
+
+    #horizontal a:hover {
+        background-color: #123456;
+        border-bottom: 5px solid #ACCDED;
+    }
+
+    /* ESTILO MENÚ VERTICAL */
+
+    #vertical {
+        width: 130px;
+    }
+
+    #vertical a {
+        font-size: 18px;
+        font-variant: small-caps;
+        color: white;
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        border-bottom: 1px solid white;
+        background-color: #456789;
+    }
+
+    #vertical a:hover {
+        background-color: #123456;
+        border-right: 5px solid #ACCDED;
+    }
+
+    </style>
+</head>
+<body>
+    <nav id="horizontal">
+        <h1>BBC</h1>
+        <ul>
+
+            <li class="news"> <a href="#">News</a> </li>
+            <li class="sport"> <a href="#">Sport</a> </li>
+            <li class="weather"> <a href="#">Weather</a> </li>
+            <li class="capital"> <a href="#">Capital</a> </li>
+            <li class="culture"> <a href="#">Culture</a> </li>
+            <li class="autos"> <a href="#">Autos</a> </li>
+            <li class="tv"> <a href="#">TV</a> </li>
+            <li class="radio"> <a href="#">Radio</a> </li>
+            <li class="more"> <a href="#">More...</a> </li>
+
+        </ul>
+        <div class="clear"> </div>
+    </nav>
+
+    <nav id="vertical">
+        <h1>Discover </h1>
+        <ul>
+
+            <li><a href="#" class="welcome">Welcome</a></li>
+            <li><a href="#" class="featured">Featured</a></li>
+            <li><a href="#" class="people">People</a></li>
+            <li><a href="#" class="music">Music</a></li>
+            <li><a href="#" class="mixes">Mixes </a></li>
+            <li><a href="#" class="videos">Videos</a></li>
+            <li><a href="#" class="radio">Radio</a></li>
+
+        </ul>
+    </nav>
+
+</body>
+</html>

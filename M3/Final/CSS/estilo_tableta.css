@@ -1,0 +1,35 @@
+#galeria, #CV{
+    clear: both;
+    width: 100%;
+}
+
+#galeria {
+    margin-bottom: 40px;
+}
+
+#itemsGaleria {
+    flex-flow: row nowrap;
+}
+
+div.item {
+    width: 20%;
+    margin: 0 2% 2% 2%;
+}
+
+#CV h2{
+    text-align: center;
+}
+
+#textoCV {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+}
+
+#textoCV ul{
+    margin-bottom: 35px;
+}
+
+#textoCV li{
+    width: 20%;
+    float: left;
+}

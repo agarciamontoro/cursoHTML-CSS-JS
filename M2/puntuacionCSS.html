@@ -1,0 +1,47 @@
+<!doctype html>
+
+<!--
+    La jerarquía del color del texto de h1 es la siguiente, de mayor a menor importancia:
+        -Rojo (inline, sobreescribe todo lo demás)
+        -Púrpura (sobre un id con clase y un elemento)
+        -Amarillo (sobre un id con dos elementos)
+        -Verde (sobre un elemento pero declarado después)
+        -Azul (sobre un elemento, declarado el primero)
+    En el código se escriben las puntuaciones que obtendría cada estilo.
+-->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Herencia</title>
+    <style>
+
+        /* PUNTUACIÓN: (0,0,0,1) */
+        h1{
+            color: blue;
+        }
+
+        /* PUNTUACIÓN: (0,0,0,1) */
+        h1{
+            color: green;
+        }
+
+        /* PUNTUACIÓN: (0,1,0,2) */
+        #caja header h1{
+            color: yellow;
+        }
+
+        /* PUNTUACIÓN: (0,1,1,1) */
+        #caja .cabecera h1{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div id="caja">
+        <header class="cabecera">
+            <h1 style="color: red;">Cabecera: header</h1>     <!--PUNTUACIÓN:(1,0,0,0) < GANADOR -->
+        </header>
+    </div>
+</body>
+</html>

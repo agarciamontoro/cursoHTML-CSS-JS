@@ -1,0 +1,23 @@
+#wrapper{
+    max-width: 85%;
+}
+
+header {
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+header>img{
+    margin-bottom: 20px;
+}
+
+header>h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+.small{
+    letter-spacing: 5px;
+    color: black;
+}
