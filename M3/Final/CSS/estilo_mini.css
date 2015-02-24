@@ -1,0 +1,50 @@
+#itemsGaleria {
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.item {
+    width: 60%;
+}
+
+#CV{
+	margin-bottom: 240px;
+}
+
+#textoCV li{
+	margin: 0;
+    width: 100%;
+    clear: both;
+}
+
+#CV h2 span{
+    display: none;	
+}
+
+#contacto{
+	position: absolute;
+	bottom: 0; 
+	margin: 0;
+	padding: 0;
+    border: none;
+}
+
+#contacto>ul{
+    flex-flow: column nowrap;
+}
+
+#contacto>ul>li{
+	margin: 5px 0;
+	display: block;
+	width: 100%;
+	border-radius: 10px;
+	background: #456789;
+}
+
+#contacto a {
+	font-size: 20px;
+    color: white;
+    position: relative;
+    top: -4px;
+}
