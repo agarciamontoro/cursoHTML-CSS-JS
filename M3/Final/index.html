@@ -7,14 +7,13 @@
     <link href="CSS/reset.css" rel="stylesheet" type="text/css" />
 
     <!-- Tipografías usadas -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,700,400,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,400italic' rel='stylesheet' type='text/css'>
 
     <!-- Hoja de estilos general (monitores grandes, televisiones...) -->
     <link href="CSS/estilo.css" rel="stylesheet" type="text/css" />
 
-    <!-- Hoja de estilos para tabletas grandes -->
+    <!-- Hoja de estilos para monitores normales y tabletas grandes -->
     <link media="only screen and (max-width: 1500px)" href="CSS/estilo_tableta.css" rel="stylesheet" type="text/css" />
 
     <!-- Hoja de estilos para tabletas pequeñas y móviles -->
@@ -31,14 +30,10 @@
 
         <header>
             <img src="DATA/foto_p.jpg" alt="Autorretrato de Alejandro" />
-            <h1>
-                Alejandro
-                <br />
-                <hr>
-                <span class="small">
-                    García Montoro
-                </span>
-            </h1>
+            <div id="titulo">
+                <h1>Alejandro</h1>
+                <h2>García Montoro</h2>
+            </div>
         </header>
 
         <nav id="contacto">
@@ -70,14 +65,12 @@
             <div id="itemsGaleria">
 
                 <div class="item" id="fotografia">
-                    <h3>Fotografía</h3>
                     <a href="https://www.flickr.com/photos/alejandrogm/">
                         <img class="itemObject" src="https://farm5.staticflickr.com/4106/4956413251_5a5878b9c7_n.jpg" />
                     </a>
                 </div>
 
                 <div class="item" id="programacion">
-                    <h3>Programación</h3>
                     <a href="https://github.com/agarciamontoro">
                         <video class="itemObject" autoplay loop>
                             <source src="DATA/video.mp4" type=video/webm>
@@ -87,7 +80,6 @@
                 </div>
 
                 <div class="item" id="disenio">
-                    <h3>Diseño</h3>
                     <object class="itemObject" type="image/svg+xml" data="DATA/dibujo.svg"></object>
                 </div>
             </div>

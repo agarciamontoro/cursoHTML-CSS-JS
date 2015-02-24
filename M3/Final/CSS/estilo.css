@@ -1,8 +1,18 @@
+/***************************************************
+********************         ***********************
+******************** GENERAL ***********************
+********************         ***********************
+****************************************************/
+
+.clear{
+    clear: both;
+}
+
 body{
     background: white;
     color: black;
-    font-family: 'Gentium Book Basic', serif;
     line-height: 1.5em;
+    font-family: 'Merriweather', serif;
 }
 
 #wrapper {
@@ -35,33 +45,30 @@ header>img {
     order: 1;
 
     width: 25%;
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 220px;
+    min-height: 220px;
     border-radius: 50%;
     margin-right: 15px;
 }
 
-header>h1{
+#titulo{
     order: 2;
+}
 
+header h1{
     font-size: 90px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     font-variant: small-caps;
+    text-align: center;
 }
 
-hr {
-    margin-top: 15px;
-    margin-bottom: 2px;
-    border: 0;
-    height: 0;
-    border-bottom: 1px solid #ccc;
-}
-
-.small{
+header h2{
+    padding-left: 14px;
+    text-align: left;
     font-size: 21px;
-    font-variant: normal;
     letter-spacing: 21px;
     color: black;
+    border-top: 1px solid #ccc;
 }
 
 /***************************************************
@@ -82,29 +89,32 @@ hr {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    padding: 0 30px;
 }
 
-#contacto>ul>li{
-    width: 16%;
+#contacto li{
 }
 
 #contacto a {
     display: block;
     text-align: center;
     line-height: 2em;
-    font-size: 14px;
+    font-size: 15px;
     text-decoration: none;
     color: black;
+    margin-bottom: -2px;
+    border-bottom: 2px solid white;
 }
 
 #contacto a:hover {
     color: #456789;
+    border-color: #345678;
 
-    -webkit-transition: color 500ms;
-    -moz-transition: color 500ms;
-    -o-transition: color 500ms;
-    -ms-transition: color 500ms;
-    transition: color 500ms;
+    -webkit-transition: color 500ms, border-color 1s;
+    -moz-transition: color 500ms, border-color 1s;
+    -o-transition: color 500ms, border-color 1s;
+    -ms-transition: color 500ms, border-color 1s;
+    transition: color 500ms, border-color 1s;
 }
 
 /***************************************************
@@ -114,29 +124,11 @@ hr {
 ***************************************************/
 
 #galeria{
-    /*border-right: 1px solid #ccc;
-    border-radius: 15px;*/
     width: 20%;
     float: left;
 }
 
-/*
-#galeria>h2{
-    text-variant: small-caps;
-    font-family: 'Vollkorn', serif;
-    text-align: center;
-    font-size: 25px;
-    color: #345678;
-}
-
-#galeria>h2>span{
-    position: relative;
-    top: -15px;
-    background: white;
-    padding: 0 25px;
-}
-*/
-#galeria h2{
+#galeria h2, #CV h2{
     border-bottom: 1px solid #ccc;
     text-variant: small-caps;
     font-family: 'Vollkorn', serif;
@@ -145,7 +137,6 @@ hr {
     margin: 0 0 20px 0;
     padding-bottom: 5px;
     color: #345678;
-
 }
 
 #itemsGaleria {
@@ -164,18 +155,6 @@ div.item {
 .itemObject{
     width: 100%;
     border-radius: 50%;
-}
-
-
-div.item>h3{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
-    font-size: 20px;
-    text-transform: uppercase;
-    display: none;
-}
-
-.itemObject {
     opacity: 0.4;
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
@@ -187,6 +166,7 @@ div.item>h3{
 .itemObject:hover {
     opacity: 1.0;
 }
+
 /***************************************************
 *******************           **********************
 *******************    C V    **********************
@@ -199,14 +179,7 @@ div.item>h3{
 }
 
 #CV h2{
-    border-bottom: 1px solid #ccc;
-    text-variant: small-caps;
-    font-family: 'Vollkorn', serif;
     text-align: right;
-    font-size: 35px;
-    margin: 0 0 20px 0;
-    padding-bottom: 5px;
-    color: #345678;
 
 }
 
@@ -216,22 +189,22 @@ div.item>h3{
     -webkit-column-count: 2;
     -webkit-column-gap: 50px;
     text-align: justify;
-    font-weight: 300;
 }
 
-#textoCV>p {
+#textoCV p {
     margin-bottom: 30px;
     text-indent: 2em;
 }
 
-#textoCV>h3 {
-    font-variant: small-caps;
+#textoCV h3 {
+    font-family: 'Vollkorn', serif;
+    font-style: italic;
     color: #456789;
-    font-size: 18px;
+    font-size: 25px;
     text-align: center;
-    margin: 0 auto 8px auto;
+    margin: 0 auto 15px auto;
     border-bottom: 1px solid #ccc;
-    width: 60%;
+    width: 70%;
 }
 
 #textoCV li{
@@ -270,9 +243,4 @@ footer{
 footer>img{
     height: 1.5em;
     vertical-align: middle;
-}
-
-
-.clear{
-    clear: both;
 }
