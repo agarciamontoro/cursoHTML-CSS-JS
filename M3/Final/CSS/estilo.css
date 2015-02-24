@@ -44,13 +44,13 @@ header>img {
 header>h1{
     order: 2;
 
-    font-size: 70px;
+    font-size: 90px;
     padding-bottom: 20px;
     font-variant: small-caps;
 }
 
 hr {
-    margin-top: 7px;
+    margin-top: 15px;
     margin-bottom: 2px;
     border: 0;
     height: 0;
@@ -58,9 +58,9 @@ hr {
 }
 
 .small{
-    font-size: 20px;
+    font-size: 21px;
     font-variant: normal;
-    letter-spacing: 12px;
+    letter-spacing: 21px;
     color: black;
 }
 
@@ -90,7 +90,6 @@ hr {
 
 #contacto a {
     display: block;
-    height: 30px;
     text-align: center;
     line-height: 2em;
     font-size: 14px;
@@ -99,14 +98,13 @@ hr {
 }
 
 #contacto a:hover {
-    background: white;
     color: #456789;
 
-    -webkit-transition: color 500ms, background-color 500ms;
-    -moz-transition: color 500ms, background-color 500ms;
-    -o-transition: color 500ms, background-color 500ms;
-    -ms-transition: color 500ms, background-color 500ms;
-    transition: color 500ms, background-color 500ms;
+    -webkit-transition: color 500ms;
+    -moz-transition: color 500ms;
+    -o-transition: color 500ms;
+    -ms-transition: color 500ms;
+    transition: color 500ms;
 }
 
 /***************************************************
@@ -235,6 +233,7 @@ div.item>h3{
     border-bottom: 1px solid #ccc;
     width: 60%;
 }
+
 #textoCV li{
     padding-left: 2em;
     background-size: 100px;

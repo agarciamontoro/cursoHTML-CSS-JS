@@ -1,3 +1,7 @@
+#wrapper{
+    margin-bottom: 20px;
+}
+
 #itemsGaleria {
     flex-flow: column nowrap;
     align-items: center;
@@ -9,7 +13,7 @@ div.item {
 }
 
 #CV{
-	margin-bottom: 240px;
+	margin-bottom: 290px;
 }
 
 #textoCV li{
@@ -19,12 +23,12 @@ div.item {
 }
 
 #CV h2 span{
-    display: none;	
+    display: none;
 }
 
 #contacto{
 	position: absolute;
-	bottom: 0; 
+	bottom: 0;
 	margin: 0;
 	padding: 0;
     border: none;
@@ -35,11 +39,8 @@ div.item {
 }
 
 #contacto>ul>li{
+    width: 100%;
 	margin: 5px 0;
-	display: block;
-	width: 100%;
-	border-radius: 10px;
-	background: #456789;
 }
 
 #contacto a {
@@ -47,4 +48,19 @@ div.item {
     color: white;
     position: relative;
     top: -4px;
+    border-radius: 10px;
+    background: #456789;
+    border: 1px solid white;
+}
+
+#contacto a:hover {
+    border: 1px solid #456789;
+    color: #456789;
+    background: white;
+
+    -webkit-transition: color 500ms, background 500ms;
+    -moz-transition: color 500ms, background 500ms;
+    -o-transition: color 500ms, background 500ms;
+    -ms-transition: color 500ms, background 500ms;
+    transition: color 500ms, background 500ms;
 }
