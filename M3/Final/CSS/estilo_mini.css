@@ -8,6 +8,7 @@
 
 #wrapper{
     margin-bottom: 20px;
+    position: relative;  /* Necesario para la posición absoluta de #contacto */
 }
 
 /***************************************************
@@ -60,15 +61,15 @@ header h2{
     font-size: 20px;
     color: white;
     border-radius: 10px;
-    background: #456789;
+    background: #345678;
     border: 1px solid white;
 }
 
 /* Reescribimos el hover, aunque es raro que en un móvil esto se visualice */
 
 #contacto a:hover {
-    border: 1px solid #456789;
-    color: #456789;
+    border: 1px solid #345678;
+    color: #345678;
     background: white;
 
     -webkit-transition: color 500ms, background 500ms;

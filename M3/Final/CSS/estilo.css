@@ -18,8 +18,7 @@ body{
 #wrapper {
     max-width: 75%;
     margin: 0 auto;
-    margin-bottom: 60px;
-    position: relative;
+    margin-bottom: 60px; /* Espacio para el footer */
 }
 
 /***************************************************
@@ -29,6 +28,7 @@ body{
  ***************************************************/
 
 header {
+    /* "Imagen + título" como flex apaisado */
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-end;
@@ -45,10 +45,13 @@ header>img {
     order: 1;
 
     width: 25%;
+
+    /* Mínimo tamaño para anchos de pantalla muy pequeños */
     min-width: 220px;
     min-height: 220px;
+
     border-radius: 50%;
-    margin-right: 15px;
+    margin-right: 15px; /* Espacio para el #titulo */
 }
 
 #titulo{
@@ -57,18 +60,21 @@ header>img {
 
 header h1{
     font-size: 90px;
-    padding-bottom: 15px;
+    padding-bottom: 15px; /* Espacio con respecto a la raya y el subtítulo */
     font-variant: small-caps;
     text-align: center;
 }
 
 header h2{
-    padding-left: 14px;
-    text-align: left;
     font-size: 21px;
-    letter-spacing: 21px;
     color: black;
     border-top: 1px solid #ccc;
+
+    /* El uso de letter-spacing da más problemas que soluciones,
+    es dependiente del navegador y muy problemático con el text-align.
+    El padding es un parche para cuadrarlo todo. No ha sido muy buena solución :( */
+    padding-left: 14px;
+    letter-spacing: 21px;
 }
 
 /***************************************************
@@ -82,9 +88,10 @@ header h2{
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     padding: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 60px; /* Espacio para el núcleo de la página */
 }
 
+/* Los items de la barra de contacto los organizamos con un flex apaisado */
 #contacto>ul{
     display: flex;
     flex-flow: row nowrap;
@@ -92,9 +99,7 @@ header h2{
     padding: 0 30px;
 }
 
-#contacto li{
-}
-
+/* Damos el estilo al a en vez de al li */
 #contacto a {
     display: block;
     text-align: center;
@@ -102,12 +107,16 @@ header h2{
     font-size: 15px;
     text-decoration: none;
     color: black;
-    margin-bottom: -2px;
+
+    /* En a:hover se añade un borde azul por debajo; para que no hubiera cambios de
+    tamaño que lo movieran todo, cada enlace tiene un borde "invisible" (del mismo color del fondo)
+    por debajo. Para compensarlo y centrarlo en el ul, se le quitan dos píxeles en el margen de abajo*/
     border-bottom: 2px solid white;
+    margin-bottom: -2px;
 }
 
 #contacto a:hover {
-    color: #456789;
+    color: #345678;
     border-color: #345678;
 
     -webkit-transition: color 500ms, border-color 1s;
@@ -123,10 +132,14 @@ header h2{
 *******************           **********************
 ***************************************************/
 
+/* La galería y el texto están por defecto posicionados uno al lado del otro */
+
 #galeria{
     width: 20%;
     float: left;
 }
+
+/* Los títulos "Intereses" y "Currículum Vitae" */
 
 #galeria h2, #CV h2{
     border-bottom: 1px solid #ccc;
@@ -139,6 +152,8 @@ header h2{
     color: #345678;
 }
 
+/* Organizamos los items de la galería en un flex vertical */
+
 #itemsGaleria {
     display: flex;
     flex-flow: column nowrap;
@@ -150,6 +165,9 @@ div.item {
     width: 70%;
     margin-top: 20px;
 }
+
+/* Hacemos saber que es un enlace clickable con la opacidad,
+que cambia al pasar el ratón por encima */
 
 .itemObject{
     width: 100%;
@@ -172,6 +190,8 @@ div.item {
 *******************           **********************
 ***************************************************/
 
+/* La galería y el texto están por defecto posicionados uno al lado del otro */
+
 #CV{
     width: 75%;
     float: right;
@@ -181,6 +201,8 @@ div.item {
     text-align: right;
 
 }
+
+/* Organizamos el texto del CV, que no es muy largo, en dos columnas */
 
 #textoCV{
     -moz-column-count: 2;
@@ -192,26 +214,30 @@ div.item {
 
 #textoCV p {
     margin-bottom: 30px;
-    text-indent: 2em;
+    text-indent: 2em; /* Para darle sangría a la primera línea de cada párrafo */
 }
 
 #textoCV h3 {
     font-family: 'Vollkorn', serif;
     font-style: italic;
-    color: #456789;
+    color: #345678;
     font-size: 25px;
     text-align: center;
     margin: 0 auto 15px auto;
     border-bottom: 1px solid #ccc;
-    width: 70%;
+    width: 70%; /* Este ancho controla el ancho del borde de abajo de cada título */
 }
+
+/* Añadimos una imagen a cada elemento li, que en todos ellos tiene la misma posición... */
 
 #textoCV li{
     padding-left: 2em;
     background-size: 100px;
     background-repeat: no-repeat;
-    background-position: 80px -45px;
+    background-position: 80px -45px; /* Estos números están puestos a base de ensayo/error :/ */
 }
+
+/* ... pero que es una imagen diferente según su clase */
 
 .nivel5{
     background-image: url(../DATA/nivel5.svg);
@@ -241,5 +267,5 @@ footer{
 
 footer>img{
     height: 1.5em;
-    vertical-align: middle;
+    vertical-align: middle; /* Alineamos la imagen del corazón con el texto */
 }
