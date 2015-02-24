@@ -16,7 +16,7 @@ body{
 }
 
 #wrapper {
-    max-width: 70%;
+    max-width: 75%;
     margin: 0 auto;
     margin-bottom: 60px;
     position: relative;
@@ -146,7 +146,6 @@ header h2{
     justify-content: space-between;
 }
 
-/* Todos los hijos de #galeria */
 div.item {
     width: 70%;
     margin-top: 20px;

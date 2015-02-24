@@ -34,6 +34,27 @@ header>img{
 *******************           **********************
 ***************************************************/
 
+/* Hacemos la galería vertical y no flotante, de manera
+que todo quede en una sola columna */
+
+#galeria, #CV{
+    clear: both;
+    width: 100%;
+}
+
+#galeria {
+    margin-bottom: 40px;
+}
+
+#itemsGaleria {
+    flex-flow: row nowrap;
+}
+
+div.item {
+    width: 20%;
+    margin: 0 2% 2% 2%;
+}
+
 /* Como en un móvil no suele haber hover, aumentamos la opacidad para que se vea todo mejor */
 
 .itemObject{

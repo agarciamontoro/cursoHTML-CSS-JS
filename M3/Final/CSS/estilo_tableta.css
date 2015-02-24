@@ -22,26 +22,12 @@ header h2{
 *******************           **********************
 ***************************************************/
 
-/* Hacemos la galería vertical y no flotante, de manera
-    que todo quede en una sóla columna */
+/* Hacemos los títulos más pequeños para que se adapten al nuevo ancho */
 
-#galeria, #CV{
-    clear: both;
-    width: 100%;
+#galeria h2, #CV h2{
+    font-size: 29px;
 }
 
-#galeria {
-    margin-bottom: 40px;
-}
-
-#itemsGaleria {
-    flex-flow: row nowrap;
-}
-
-div.item {
-    width: 20%;
-    margin: 0 2% 2% 2%;
-}
 
 /***************************************************
 *******************           **********************
