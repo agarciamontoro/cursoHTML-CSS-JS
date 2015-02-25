@@ -60,6 +60,10 @@
             </ul>
         </nav>
 
+        <!-- La estructura de un div para cada item donde se encierra cada objeto no es
+        necesaria en este caso concreto, pero muy útil si a cada item se le quiere añadir
+        un título, o cualquier otro elemento que no sea el objeto en sí -->
+
         <div id="galeria">
             <h2>Intereses</h2>
 
@@ -81,13 +85,18 @@
                 </div>
 
                 <div class="item" id="disenio">
+                    <!-- Aquí no aparece etiqueta a porque es IMPOSIBLE poner un enlace encima de
+                    un SVG sin taparlo (lo que anularía los hovers), así que he embebido el
+                    enlace en el SVG, que no es más que otro lenguaje de etiquetas igual que HTML
+                    y se comporta de la misma manera-->
                     <object class="itemObject" type="image/svg+xml" data="DATA/dibujo.svg"></object>
                 </div>
             </div>
         </div>
 
         <section id="CV">
-            <h2>Currículum<span> Vitae</span></h2> <!-- El span se usa para eliminar la palabra " Vitae" en estilo_mini.css -->
+            <!-- El span se usa para eliminar la palabra " Vitae" en estilo_mini.css -->
+            <h2>Currículum<span> Vitae</span></h2>
 
             <div id="textoCV">
 
