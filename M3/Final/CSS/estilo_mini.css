@@ -48,6 +48,7 @@ header h2{
 /* Hacemos que los enlaces se apilen en una columna */
 
 #contacto>ul{
+    -webkit-flex-flow: column nowrap;
     flex-flow: column nowrap;
 }
 
@@ -92,8 +93,13 @@ header h2{
 }
 
 #itemsGaleria {
+    -webkit-flex-flow: column nowrap;
     flex-flow: column nowrap;
+
+    -webkit-align-items: center;
     align-items: center;
+
+    -webkit-justify-content: center;
     justify-content: space-between;
 }
 

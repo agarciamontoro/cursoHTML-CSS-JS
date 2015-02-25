@@ -19,8 +19,13 @@
 /* Apilamos fotografía y título, para que quepa todo a lo ancho */
 
 header {
+    -webkit-flex-flow: column nowrap;
     flex-flow: column nowrap;
+
+    -webkit-align-items: center;
     align-items: center;
+
+    -webkit-justify-content: center;
     justify-content: center;
 }
 
@@ -47,6 +52,7 @@ que todo quede en una sola columna */
 }
 
 #itemsGaleria {
+    -webkit-flex-flow: row nowrap;
     flex-flow: row nowrap;
 }
 

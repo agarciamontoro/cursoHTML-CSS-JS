@@ -29,9 +29,19 @@ body{
 
 header {
     /* "Imagen + título" como flex apaisado */
-    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+
+    -webkit-flex-flow: row nowrap;
     flex-flow: row nowrap;
+
+    -webkit-align-items: flex-end;
     align-items: flex-end;
+
+    -webkit-justify-content: center;
     justify-content: center;
 
     margin: 20px 0;
@@ -93,9 +103,18 @@ header h2{
 
 /* Los items de la barra de contacto los organizamos con un flex apaisado */
 #contacto>ul{
-    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+
+    -webkit-flex-flow: row nowrap;
     flex-flow: row nowrap;
+
+    -webkit-justify-content: space-between;
     justify-content: space-between;
+
     padding: 0 30px;
 }
 
@@ -156,9 +175,19 @@ header h2{
 /* Organizamos los items de la galería en un flex vertical */
 
 #itemsGaleria {
-    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+    -webkit-flex-flow: column nowrap;
     flex-flow: column nowrap;
+
+    -webkit-align-items: center;
     align-items: center;
+
+    -webkit-justify-content: space-between;
     justify-content: space-between;
 }
 
