@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>  
+<title>JavaScript SVG Animation</title>
+<style>
+#reloj {
+	height: 90%;
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 5%;
+}
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+html {
+	height: 100%;
+	width: 100%;
+}
+</style>
+<script>
+    function init()
+    {
+      timer = setInterval(doAnim, 1000);    
+    } 
+
+    function doAnim()
+    { 
+      var d = new Date();
+      var h = (d.getHours()*30)+(d.getMinutes()/2);
+      var m = d.getMinutes()*6;
+      var s = d.getSeconds()*6;
+	  document.getElementById("hora").setAttribute("transform", "rotate(" +h+ " 121 177)");
+	  document.getElementById("minutos").setAttribute("transform", "rotate(" +m+ " 121 177)");
+	  document.getElementById("segundos").setAttribute("transform", "rotate(" +s+ " 121 177)");
+    }
+</script>  
+</head>
+
+<body onload="init(); doAnim();"> 
+<svg  id="reloj" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="245px" height="352px" viewBox="0 0 245 352" enable-background="new 0 0 245 352" xml:space="preserve">
+<g id="fondo">
+	<rect x="63" y="19" width="117" height="79"/>
+	<rect x="63" y="254" width="117" height="79"/>
+	<rect x="25" y="117" width="19" height="118"/>
+	<rect x="199" y="117" width="19" height="118"/>
+	<rect x="44" y="98" width="19" height="19"/>
+	<rect x="44" y="235" width="19" height="19"/>
+	<rect x="180" y="98" width="19" height="19"/>
+	<rect x="180" y="235" width="19" height="19"/>
+	<rect x="218" y="156" width="19" height="40"/>
+</g>
+<rect id="minutos" x="112" y="107" width="19" height="79"/>
+<rect id="hora" x="112" y="127" width="19" height="59"/>
+<rect id="segundos" x="119" y="102" width="4" height="84"/>
+<circle id="centro" cx="121" cy="177" r="0.994"/>
+</svg>
+</body>
+</html>

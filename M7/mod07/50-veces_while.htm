@@ -1,0 +1,23 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8">
+</head>
+<body>
+<h3>Función veces con while</h3>
+
+<script type="text/javascript">
+
+function veces (letra, frase) {
+  var i = 0, n = 0;           // inicialización del bucle
+  while ( i < frase.length ) {// condición de permanencia
+    if ( letra === frase[i]) { ++n; }; //acción del bucle
+    ++i;                     // acción de final del bucle
+  }
+  return n;
+};
+
+var l='a', f='la casa roja';
+document.write('La frase "' + f + '" tiene ' 
+	         + veces(l,f) + ' veces la letra ' + l);
+</script>
+</body>
+</html>

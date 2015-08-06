@@ -1,0 +1,20 @@
+<!DOCTYPE html><html>
+<head><title>Ejemplo de función</title><meta charset="UTF-8"></head>
+
+<body><h2>Parámetros de función</h2>
+
+<script type="text/javascript">
+
+function comer(persona, comida) {
+   persona  = (persona || 'Alguien');
+   comida   = (comida   || 'algo');
+  return (persona + " come " + comida + "<br>");
+};
+
+document.write(comer('José','paella'));
+document.write(comer('José','paella','carne'));
+document.write(comer(undefined,'carne'));
+document.write(comer('José'));
+</script>
+</body>
+</html>

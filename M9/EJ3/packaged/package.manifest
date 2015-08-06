@@ -1,0 +1,10 @@
+{
+    "version": "1.0",
+    "name": "Cronómetro",
+    "description": "Cronómetro con contador de paradas",
+    "package_path": "https://dl.dropboxusercontent.com/s/cw06c7gfhxrxyop/package.zip",
+    "developer":{
+        "name": "Alejandro García Montoro",
+        "url":  "https://github.com/agarciamontoro"
+    }
+}

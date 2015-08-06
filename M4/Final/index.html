@@ -1,0 +1,144 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Etiqueta imprescindible para que los dispositivos pongan el viewport
+    del mismo tamaño que su ancho y no tengan zoom inicial -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Hoja de estilos para empezar con un estilo (casi) nulo (obtenida en http://cssreset.com) -->
+    <link href="CSS/reset.css" rel="stylesheet" type="text/css" />
+
+    <!-- Tipografías usadas -->
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn:400,400italic' rel='stylesheet' type='text/css'>
+
+    <!-- Hoja de estilos general (televisiones, monitores grandes...) -->
+    <link href="CSS/estilo.css" rel="stylesheet" type="text/css" />
+
+    <!-- Hoja de estilos para monitores normales y tabletas grandes -->
+    <link media="only screen and (max-width: 1500px)" href="CSS/estilo_tableta.css" rel="stylesheet" type="text/css" />
+
+    <!-- Hoja de estilos para tabletas pequeñas y móviles -->
+    <link media="only screen and (max-width: 790px)" href="CSS/estilo_movil.css" rel="stylesheet" type="text/css" />
+
+    <!-- Hoja de estilos para móviles pequeños -->
+    <link media="only screen and (max-width: 490px)" href="CSS/estilo_mini.css" rel="stylesheet" type="text/css" />
+
+    <title>Alejandro García</title>
+</head>
+
+<body>
+
+    <!-- Div que contentdrá el resultado del script -->
+    <div id="ejercicioJS">
+        <script type="text/javascript" src="JS/calculoArea.js"></script>
+        <p>Haga click en cualquier lugar de la ventana para eliminar este div y acceder a la página.</p>
+    </div>
+
+    <!-- Div necesario para centrar todo el contenido y darle un ancho específico -->
+    <div id="wrapper">
+
+        <header>
+            <img src="DATA/foto_p.jpg" alt="Autorretrato de Alejandro" />
+            <div id="titulo">
+                <h1>Alejandro</h1>
+                <h2>García Montoro</h2>
+            </div>
+        </header>
+
+        <nav id="contacto">
+            <ul>
+                <li id="fb">
+                    <a href="http://www.facebook.com">Facebook</a>
+                </li>
+                <li id="tw">
+                    <a href="http://www.twitter.com">Twitter</a>
+                </li>
+                <li id="gh">
+                    <a href="https://github.com/agarciamontoro">GitHub</a>
+                </li>
+                <li id="fr">
+                    <a href="https://www.flickr.com/photos/alejandrogm/">Flickr</a>
+                </li>
+                <li id="de">
+                    <a href="http://www.demotix.com/users/alejandro-garcia-montoro/profile">Demotix</a>
+                </li>
+                <li id="ma">
+                    <a href="mailto://prueba@gmail.com">Mail</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- La estructura de un div para cada item donde se encierra cada objeto no es
+        necesaria en este caso concreto, pero muy útil si a cada item se le quiere añadir
+        un título, o cualquier otro elemento que no sea el objeto en sí -->
+
+        <div id="galeria">
+            <h2>Intereses</h2>
+
+            <div id="itemsGaleria">
+
+                <div class="item" id="fotografia">
+                    <a href="https://www.flickr.com/photos/alejandrogm/">
+                        <img class="itemObject" src="https://farm5.staticflickr.com/4106/4956413251_5a5878b9c7_n.jpg" />
+                    </a>
+                </div>
+
+                <div class="item" id="programacion">
+                    <a href="https://github.com/agarciamontoro">
+                        <video class="itemObject" autoplay controls loop>
+                            <source src="https://dl.dropboxusercontent.com/s/mqla4m705blnjs4/video.mp4" type=video/mp4>
+                            <source src="https://dl.dropboxusercontent.com/s/ibm91th6r655vll/video.webm" type=video/webm>
+                        </video>
+                    </a>
+                </div>
+
+                <div class="item" id="disenio">
+                    <!-- Aquí no aparece etiqueta a porque es IMPOSIBLE poner un enlace encima de
+                    un SVG sin taparlo (lo que anularía los hovers), así que he embebido el
+                    enlace en el SVG, que no es más que otro lenguaje de etiquetas igual que HTML
+                    y se comporta de la misma manera-->
+                    <object class="itemObject" type="image/svg+xml" data="DATA/dibujo.svg"></object>
+                </div>
+            </div>
+        </div>
+
+        <section id="CV">
+            <!-- El span se usa para eliminar la palabra " Vitae" en estilo_mini.css -->
+            <h2>Currículum<span> Vitae</span></h2>
+
+            <div id="textoCV">
+
+                <h3>Experiencia</h3>
+                <p>Donec sodales lorem efficitur ligula interdum eleifend. Curabitur facilisis felis non risus scelerisque auctor. Duis ac sapien justo. Proin rhoncus consectetur nisl, vel tempus quam sodales ac. Aenean at sapien lorem. Donec efficitur suscipit tellus. Vivamus purus nisl, dictum et rhoncus vitae, gravida ut ex. Donec orci purus, bibendum eget felis nec, vulputate aliquam felis. Vestibulum efficitur a ex ac malesuada. Suspendisse rutrum ultrices vulputate. Nulla vel odio a quam dapibus viverra eget a lorem. Etiam nunc nisi, aliquet in sapien ut, ornare egestas sapien. Etiam sollicitudin nunc ac scelerisque porta. Maecenas ornare finibus sapien, eget semper ipsum pharetra ut. Nulla consectetur scelerisque est, non venenatis felis euismod at.</p>
+
+                <p>Maecenas quis dolor quis mauris lobortis condimentum. Cras sit amet ultrices turpis. Praesent convallis tempor sagittis. Aenean fermentum tellus ut lorem maximus, vitae malesuada tellus consequat. Donec scelerisque luctus dui, eget porttitor lorem eleifend nec. Duis quis volutpat elit. Nunc luctus, massa eget tincidunt luctus, tellus nibh varius magna, in tincidunt massa ex vitae ex. Sed vel consectetur velit, sit amet fermentum turpis. Fusce arcu nisl, semper volutpat mattis et, porttitor vitae orci. Proin non lorem purus. Phasellus ultrices hendrerit sodales. Mauris non dignissim nisl, ac posuere purus.</p>
+
+                <p>Donec ultrices quis orci eget auctor. Fusce eget diam risus. Suspendisse in mauris blandit ante euismod pulvinar. Nam ut quam laoreet, scelerisque nisi vel, sollicitudin lorem. Duis vel lobortis odio, nec efficitur urna. Sed et auctor erat, et iaculis nibh. Nulla non molestie mauris. Quisque hendrerit congue arcu, eu faucibus lorem euismod nec. Fusce in pharetra felis. Ut elementum, purus eu sagittis scelerisque, felis magna scelerisque urna, ac sodales lorem ipsum sed elit. Nulla volutpat sed mi eu tempor.</p>
+
+                <h3>Idiomas</h3>
+                <ul>
+                    <li class="nivel5">Lorem</li>
+                    <li class="nivel4">Ipsum</li>
+                    <li class="nivel4">Dolor</li>
+                    <li class="nivel3">Sit</li>
+                </ul>
+
+                <h3>Educación</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id purus aliquam, commodo ipsum dignissim, bibendum erat. Nullam accumsan vulputate neque, et ullamcorper diam varius ac. Morbi vulputate ac enim eu maximus. Nulla eget euismod lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at aliquam dolor. Donec varius elementum dolor in venenatis.</p>
+
+                <p>Fusce vel nisl mollis, fringilla purus eu, rhoncus mi. In hac habitasse platea dictumst. Nullam consequat a magna vel mollis. Nulla aliquam ornare sem sed mollis. Vestibulum et mollis nunc. In hac habitasse platea dictumst. Sed in finibus est. Vestibulum iaculis odio quis ultricies maximus.</p>
+
+            </div>
+        </section>
+
+        <div class="clear"></div>
+    </div>
+
+    <footer>Diseñado con <img src="DATA/heart.svg" alt="love"> por Alejandro</footer>
+
+</body>
+
+</html>

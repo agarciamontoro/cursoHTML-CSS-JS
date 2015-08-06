@@ -1,0 +1,8 @@
+body { background:#FF0; }
+
+#page-wrap { width: 700px; }
+#page-wrap:after { content: "Pantalla Mediana"; }
+#main-content { float: right; width: 440px; height: 300px; }
+#secondary-one { float: left; width: 170px; height: 300px; }
+#secondary-two { display: none; }
+#detalle { width: 440px; height: 250px; position:relative}

@@ -1,0 +1,69 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE html><html>
+<head><title>Galería</title><meta charset="UTF-8">
+<script type="text/javascript" src="zepto.min.js" ></script>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<style>
+html {
+	height: 100%;
+	width: 100%;
+}
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-family: 'Droid Sans', sans-serif;
+}
+h1 {
+	text-align: center;
+	color: red;
+	font-style: normal;
+	/* [disabled]font-variant: normal; */
+	font-size: 1.5em;
+	font-weight: normal;
+}
+#reloj {
+	height: 80%;
+	width: 80%;
+	left: 10%;
+	top: 10%;
+	position: absolute;
+}
+#tex{
+	text-align: center;
+	font-size: 3em;
+	}
+</style>
+<script>
+  function animar() { 
+    var d = new Date();
+    var s = d.getSeconds();   // grados = segundos * 6 
+    var m = d.getMinutes();   // grados = minutos * 6 
+    var h = d.getHours();
+    var hh = h*30 + m/2;  // grados de la manecilla de horas
+    $("#tex").html(h + ":" + m + ":" + s);
+    $("#hor").attr("transform", "rotate(" + hh + " 80 80)");
+    $("#min").attr("transform", "rotate(" + m*6 + " 80 80)");
+    $("#seg").attr("transform", "rotate(" + s*6 + " 80 80)");
+  }
+  $(function(){
+    setInterval(animar, 1000);
+    animar();
+  })
+</script>  
+</head>
+<body>
+<h1>RELOJ</h1>
+<div id="tex">texto</div>
+<svg id="reloj" xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" >
+	 
+  <circle id='myCircle'  cx='80' cy='80' r='50' stroke='white'  stroke-width='1' />
+  <line stroke-linecap="round" id="hor" x1='80' y1='80' x2='80' y2='50' style='stroke:white;stroke-width:3'/>
+  <line stroke-linecap="round" id="min" id="min" x1='80' y1='80' x2='80' y2='40' style='stroke:white;stroke-width:3'/>
+  <line id="seg" x1='80' y1='80' x2='80' y2='30' style='stroke:red;stroke-width:1'/>
+
+</svg>
+</body></html>

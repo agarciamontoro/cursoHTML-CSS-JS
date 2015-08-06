@@ -1,0 +1,17 @@
+{
+    "version": "1.0",
+    "name": "Cronómetro",
+    "description": "Cronómetro con contador de paradas",
+    "launch_path": "/index.html",
+
+    "icons":{
+        "16":   "/ICO/ico_16.png",
+        "48":   "/ICO/ico_48.png",
+        "128":  "/ICO/ico_128.png"
+    },
+
+    "developer":{
+        "name": "Alejandro García Montoro",
+        "url":  "https://github.com/agarciamontoro"
+    }
+}

@@ -1,0 +1,25 @@
+*
+{
+	background: #427D91;
+	color: #E9E9E9 ;
+	font: normal normal 400 1em 'Open Sans', sans-serif;
+	margin: 0px auto;
+	padding: 0px;
+	text-align: center;
+}
+p 
+{
+	color: #EBEBEB;
+	font-size: 5em; 
+	margin: 1em 0;
+}
+#afraid 
+{
+	color: #D11B3F;
+	margin: 0.08em;
+	font-size: 8em;
+}
+#respuesta
+{
+	margin: 0.5em 0;
+}

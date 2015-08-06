@@ -1,0 +1,23 @@
+{
+    "version": "1.0",
+    "name": "Geolocate",
+    "description": "Geolocalizador con calculador de rutas",
+    "launch_path": "/M10/EJ1/hosted/index.html",
+
+    "icons":{
+        "16":   "/M10/EJ1/hosted/ICO/ico_16.png",
+        "48":   "/M10/EJ1/hosted/ICO/ico_48.png",
+        "128":  "/M10/EJ1/hosted/ICO/ico_128.png"
+    },
+
+    "developer":{
+        "name": "Alejandro García Montoro",
+        "url":  "https://github.com/agarciamontoro"
+    },
+
+    "permissions": {
+        "geolocation":{
+            "description": "Requerido para el autocompletado en la pantalla compartida"
+        }
+    }
+}

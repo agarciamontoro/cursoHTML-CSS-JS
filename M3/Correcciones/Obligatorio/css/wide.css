@@ -1,0 +1,21 @@
+body { background:#999; }
+
+#page-wrap { width: 900px; position:relative }
+#page-wrap:after { content: "Pantalla Grande"; }
+#main-content { 
+	float: left;
+	width: 440px;
+	height: 300px; 
+	margin-left: 218px; }
+
+#secondary-one {
+	width: 170px;
+	height: 300px;
+	position: absolute;
+	left: 1px;
+	top: 85px;
+}
+
+#secondary-two { float: right; width: 153px; height: 300px; }
+
+#detalle { width: 440px; height: 250px; position:relative}

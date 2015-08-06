@@ -1,0 +1,10 @@
+{
+    "version": "1.0",
+    "name": "Geolocate",
+    "description": "Geolocalizador con calculador de rutas",
+    "package_path": "https://dl.dropboxusercontent.com/s/czdflk0dnwdqv7y/package.zip",
+    "developer":{
+        "name": "Alejandro García Montoro",
+        "url":  "https://github.com/agarciamontoro"
+    }
+}

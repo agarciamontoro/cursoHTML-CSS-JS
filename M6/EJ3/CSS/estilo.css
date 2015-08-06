@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #456789;
+    color: #456789;
+}
+
+#ejercicioJS{
+    background: white;
+    margin: 0;
+    margin-top: 200px;
+    padding: 20px 0;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Vollkorn', serif;
+}

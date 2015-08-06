@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html><html>
+<head><title>Galería</title><meta charset="UTF-8">
+<script type="text/javascript" src="zepto.min.js" ></script>
+<script>
+  var ds = 0;
+  function animar() {
+  	
+    var d = new Date();
+    var s = d.getSeconds();   // grados = segundos * 6 
+    var m = d.getMinutes();   // grados = minutos * 6 
+    var h = d.getHours();
+    var hh = h*30 + m/2;  // grados de la manecilla de horas
+    ds++;
+    ds %= 9;   
+    $("#horaTex").html(h + ":" + m + ":" + s);
+    $("#hor").attr("transform", "rotate(" + hh + " 80 80)");
+    $("#min").attr("transform", "rotate(" + m*6 + " 80 80)");
+    $("#seg").attr("transform", "rotate(" + s*6 + " 80 80)");
+    $("#deciseg").attr("transform", "rotate(" + ds*40 + " 100 100)");
+  }
+  $(function(){
+    setInterval(animar, 100);
+    animar();
+  })
+</script>  
+</head>
+<body>
+<h1>Reloj</h1>
+
+<svg>  
+  <circle id='myCircle'  cx='80' cy='80' r='50'
+          fill='white' stroke='black'  stroke-width='3' />
+  <circle id='myCircle2'  cx='100' cy='100' r='12'
+          fill='white' stroke='black'  stroke-width='2' />
+  <line id="deciseg" x1='100' y1='100' x2='100' y2='90'
+        style='stroke:red;stroke-width:1'/>
+  <text id="horaTex" x="50" y="50" fill="black"></text>  
+  <line id="hor" x1='80' y1='80' x2='80' y2='50'
+        style='stroke:grey;stroke-width:5'/>
+  <line id="min" x1='80' y1='80' x2='80' y2='40'
+        style='stroke:grey;stroke-width:3'/>
+  <line id="seg" x1='80' y1='80' x2='80' y2='30'
+        style='stroke:red;stroke-width:1'/>
+
+  
+</svg>
+</body>
+</html>

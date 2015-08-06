@@ -1,0 +1,114 @@
+/* Permite que las dimensiones de una caja incluyan al padding y al border */
+*{
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+/* Ajustes generales */
+body{
+    /* Ajustamos todos los margins y paddings para empezar de cero */
+    margin: 0;
+    padding: 0;
+
+    /* Ajustes irrelevantes */
+    color: #456789;
+    text-align: center;
+    font-size: 18;
+    font-weight: bold;
+
+    background: #456789;
+}
+
+/******************************************************************
+ *********************** AJUSTES GENERALES ************************
+ ******************************************************************/
+
+/* Ajustamos ancho de la caja general y centramos en la página */
+#wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*  Tanto el header como el footer ocupan 10%
+    (que repartimos entre altura y padding gracias al box-sizing)
+*/
+#wrapper header, #wrapper footer{
+    height: 9.5%;
+    background: white;
+    padding-top: 0.5%;
+}
+
+/* Gestionamos la caja central como flex */
+#central{
+    height: 79.5%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0.5% 0;
+}
+
+/******************************************************************
+********************** AJUSTES DE "CENTRAL" ***********************
+******************************************************************/
+
+#central nav{
+    padding: 10px;
+    height: 100%;
+    background: white;
+
+    order: 1;
+    flex: 1 1 auto;
+}
+
+/* La sección también la gestionaremos como flex */
+#central section{
+    height: 100%;
+    margin: 0 0.5%;
+    background: white;
+    padding: 0.5%;
+
+    order: 2;
+    flex: 2 1 auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#central aside{
+    padding: 10px;
+    height: 100%;
+    order: 3;
+    flex: 1 1 auto;
+    background: white;
+}
+
+/******************************************************************
+*********************** AJUSTES DE SECTION ************************
+******************************************************************/
+
+#central section>header{
+    background: white;
+    border: 3px solid #456789;
+
+    height: 14%;
+    padding: 1%;
+    margin: 0.5%;
+}
+
+#central section>article{
+    background: white;
+    border: 3px solid #456789;
+
+    height: 69%;
+    margin: 0 0.5%;
+    padding: 1%;
+}
+
+#central section>footer{
+    background: white;
+    border: 3px solid #456789;
+
+    height: 14%;
+    padding: 1%;
+    margin: 0.5%;
+}

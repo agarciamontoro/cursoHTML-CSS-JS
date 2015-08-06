@@ -1,0 +1,105 @@
+/* Añade la tipografía Digital para su uso en todo el CSS*/
+@font-face {
+    font-family: Digital;
+    src: url('digital-7.ttf') format("truetype");
+}
+
+/*****************************************
+*************              ***************
+*************    ESFERA    ***************
+*************              ***************
+******************************************/
+
+/* Círculo exterior */
+#esfera {
+    stroke: #456789;
+    stroke-width: 3;
+    fill: white;
+}
+
+/* CENTROS DE LAS ESFERAS */
+
+.centro1{
+    fill: white;
+    stroke: #456789;
+}
+
+.centro2{
+    fill: #456789;
+}
+
+/* MANECILLAS */
+
+/* Ajustes generales de manecillas */
+line.manecilla{
+    stroke: #456789;
+}
+
+/* Ajustes generales de manecillas transparentes */
+line.transparente{
+    stroke-opacity: 0.8;
+}
+
+/* MANECILLAS CONCRETAS */
+
+/* Manecilla horas */
+#hor {
+    stroke-width: 3;
+}
+
+/* Manecilla minutos */
+#min {
+    stroke-width: 2;
+}
+
+/* Manecilla segundos */
+#seg {
+    stroke: black;
+    stroke-width: 1;
+}
+
+/* Manecilla décimas de segundo */
+#dec{
+    stroke-width: 0.5;
+}
+
+/*****************************************
+*************              ***************
+*************  MINIESFERA  ***************
+*************              ***************
+******************************************/
+
+/* Círculo de la esfera */
+#miniesfera {
+    fill: none;
+    stroke: #456789;
+}
+
+/*****************************************
+*************               **************
+*************     TEXTO     **************
+*************               **************
+******************************************/
+
+/* Da estilo a todo el texto del SVG */
+text{
+    font-family: Digital, verdana, sans-serif;
+    fill: #456789;
+}
+
+/* Da estilo a todos los cajetines de texto */
+.cajetin{
+    stroke: #456789;
+    stroke-width: 0.5;
+    fill: none;
+}
+
+/* Texto del reloj digital */
+#tex {
+    font-size: 10px;
+}
+
+/* Texto de la fecha */
+#fechaDia{
+    font-size: 5px;
+}

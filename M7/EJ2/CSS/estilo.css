@@ -1,0 +1,55 @@
+#wrapper{
+    margin: 30px auto;
+    width: 90%;
+    text-align: center;
+    color: #456789;
+}
+
+h3{
+    font-size: 25px;
+}
+
+iframe {
+    padding:10px;
+    border:5px solid #456789;
+    background-color:white;
+    width:300px;
+    height:350px;
+    margin-bottom: 20px;
+}
+
+#iframes {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-wrap: wrap;
+    flex-wrap:wrap;
+
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+#iframeWrapper h4,
+#iframeWrapper p {
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+#marco {
+    background-color: #456789;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid black;
+}
+
+.formulario{
+    margin: 10px;
+}
+
+button{
+    width: 75px;
+}

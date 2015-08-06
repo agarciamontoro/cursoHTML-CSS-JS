@@ -1,0 +1,60 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE html><html>
+<head>
+<title>Galería</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="zepto.min.js" ></script>
+<style>
+#reloj {
+	height: 80%;
+	width: 80%;
+	margin-left: 10%;
+}
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	color: #FFFFFF;
+	background-color: #000000;
+}
+html {
+	height: 100%;
+	width: 100%;
+}
+h1 {
+	text-align: center;
+	font-family: Helvetica, Arial, sans-serif;
+	color: red;
+}
+</style>
+<script>
+  function animar() { 
+    var d = new Date();
+    var h = (d.getHours()*30)+(d.getMinutes()/2);  
+    var m = d.getMinutes()*6;
+    var s = d.getSeconds()*6;
+    $("#hor").attr("transform", "rotate(" + h + " 60 60)");
+    $("#min").attr("transform", "rotate(" + m + " 60 60)");
+    $("#seg").attr("transform", "rotate(" + s + " 60 60)");
+  }
+  
+  $(function(){
+    setInterval(animar, 1000);
+    animar();
+  })
+</script>  
+</head>
+
+<body>
+<h1>RELOJ</h1>
+<svg id="reloj" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" >
+	 
+  <circle id='myCircle'  cx='60' cy='60' r='50' stroke='white'  stroke-width='1' />
+  <line stroke-linecap="round" id="hor" x1='60' y1='60' x2='60' y2='30' style='stroke:white;stroke-width:3'/>
+  <line stroke-linecap="round" id="min" x1='60' y1='60' x2='60' y2='20' style='stroke:white;stroke-width:3'/>
+  <line id="seg" x1='60' y1='60' x2='60' y2='20' style='stroke:red;stroke-width:1'/>
+
+</svg>
+</body>
+</html>

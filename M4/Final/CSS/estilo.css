@@ -1,0 +1,339 @@
+/***************************************************
+********************         ***********************
+******************** GENERAL ***********************
+********************         ***********************
+****************************************************/
+
+.clear{
+    clear: both;
+}
+
+body{
+    background: white;
+    color: black;
+    line-height: 1.5em;
+    font-family: 'Merriweather', serif;
+}
+
+#wrapper {
+    max-width: 75%;
+    margin: 0 auto;
+    margin-bottom: 60px; /* Espacio para el footer */
+}
+
+/***************************************************
+ ********************        ***********************
+ ******************** HEADER ***********************
+ ********************        ***********************
+ ***************************************************/
+
+header {
+    /* "Imagen + título" como flex apaisado */
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    margin: 20px 0;
+    font-family: 'Vollkorn', serif;
+    line-height: 2em;
+
+    color: #345678;
+}
+
+header>img {
+    -webkit-order: 1;
+    order: 1;
+
+    width: 25%;
+
+    /* Mínimo tamaño para anchos de pantalla muy pequeños */
+    min-width: 220px;
+    min-height: 220px;
+
+    border-radius: 50%;
+    margin-right: 15px; /* Espacio para el #titulo */
+}
+
+#titulo{
+    -webkit-order: 2;
+    order: 2;
+}
+
+header h1{
+    font-size: 90px;
+    padding-bottom: 15px; /* Espacio con respecto a la raya y el subtítulo */
+    font-variant: small-caps;
+    text-align: center;
+}
+
+header h2{
+    font-size: 21px;
+    color: black;
+    border-top: 1px solid #ccc;
+
+    /* El uso de letter-spacing da más problemas que soluciones,
+    es dependiente del navegador y muy problemático con el text-align.
+    El padding es un parche para cuadrarlo todo. No ha sido muy buena solución :( */
+    padding-left: 14px;
+    letter-spacing: 21px;
+}
+
+/***************************************************
+*******************          ***********************
+******************* CONTACTO ***********************
+*******************          ***********************
+***************************************************/
+
+#contacto {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 60px; /* Espacio para el núcleo de la página */
+}
+
+/* Los items de la barra de contacto los organizamos con un flex apaisado */
+#contacto>ul{
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+
+    padding: 0 30px;
+}
+
+/* Damos el estilo al a en vez de al li */
+#contacto a {
+    display: block;
+    text-align: center;
+    line-height: 2em;
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+
+    /* En a:hover se añade un borde azul por debajo; para que no hubiera cambios de
+    tamaño que lo movieran todo, cada enlace tiene un borde "invisible" (del mismo color del fondo)
+    por debajo. Para compensarlo y centrarlo en el ul, se le quitan dos píxeles en el margen de abajo*/
+    border-bottom: 2px solid white;
+    margin-bottom: -2px;
+}
+
+#contacto a:hover {
+    color: #345678;
+    border-color: #345678;
+
+    -webkit-transition: color 500ms, border-color 1s;
+    -moz-transition: color 500ms, border-color 1s;
+    -o-transition: color 500ms, border-color 1s;
+    -ms-transition: color 500ms, border-color 1s;
+    transition: color 500ms, border-color 1s;
+}
+
+/***************************************************
+*******************           **********************
+*******************  GALERIA  **********************
+*******************           **********************
+***************************************************/
+
+/* La galería y el texto están por defecto posicionados uno al lado del otro */
+
+#galeria{
+    width: 20%;
+    float: left;
+}
+
+/* Los títulos "Intereses" y "Currículum Vitae" */
+
+#galeria h2, #CV h2{
+    border-bottom: 1px solid #ccc;
+    text-variant: small-caps;
+    font-family: 'Vollkorn', serif;
+    text-align: center;
+    font-size: 35px;
+    margin: 0 0 20px 0;
+    padding-bottom: 5px;
+    color: #345678;
+}
+
+/* Organizamos los items de la galería en un flex vertical */
+
+#itemsGaleria {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+
+    -webkit-align-items: center;
+    align-items: center;
+
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+div.item {
+    width: 70%;
+    margin-top: 20px;
+}
+
+/* Hacemos saber que es un enlace clickable con la opacidad,
+que cambia al pasar el ratón por encima */
+
+.itemObject{
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0.4;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.itemObject:hover {
+    opacity: 1.0;
+}
+
+/***************************************************
+*******************           **********************
+*******************    C V    **********************
+*******************           **********************
+***************************************************/
+
+/* La galería y el texto están por defecto posicionados uno al lado del otro */
+
+#CV{
+    width: 75%;
+    float: right;
+}
+
+#CV h2{
+    text-align: right;
+
+}
+
+/* Organizamos el texto del CV, que no es muy largo, en dos columnas */
+
+#textoCV{
+    -moz-column-count: 2;
+    -moz-column-gap: 50px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 50px;
+    text-align: justify;
+}
+
+#textoCV p {
+    margin-bottom: 30px;
+    text-indent: 2em; /* Para darle sangría a la primera línea de cada párrafo */
+}
+
+#textoCV h3 {
+    font-family: 'Vollkorn', serif;
+    font-style: italic;
+    color: #345678;
+    font-size: 25px;
+    text-align: center;
+    margin: 0 auto 15px auto;
+    border-bottom: 1px solid #ccc;
+    width: 70%; /* Este ancho controla el ancho del borde de abajo de cada título */
+}
+
+/* Añadimos una imagen a cada elemento li, que en todos ellos tiene la misma posición... */
+
+#textoCV li{
+    padding-left: 2em;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: 80px -45px; /* Estos números están puestos a base de ensayo/error :/ */
+}
+
+/* ... pero que es una imagen diferente según su clase */
+
+.nivel5{
+    background-image: url(../DATA/nivel5.svg);
+}
+.nivel4{
+    background-image: url(../DATA/nivel4.svg);
+}
+.nivel3{
+    background-image: url(../DATA/nivel3.svg);
+}
+
+/***************************************************
+*******************           **********************
+*******************   FOOTER  **********************
+*******************           **********************
+***************************************************/
+
+footer{
+    width: 100%;
+    text-align: center;
+    margin-bottom:10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+footer>img{
+    height: 1.5em;
+    vertical-align: middle; /* Alineamos la imagen del corazón con el texto */
+}
+
+/***************************************************
+*******************            *********************
+******************* JAVASCRIPT *********************
+*******************            *********************
+***************************************************/
+
+#ejercicioJS{
+    position: fixed;
+
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 20% 0;
+
+    background: #456789;
+    opacity: 0.8;
+
+    font-size: 60px;
+    text-align: center;
+    font-weight: 900;
+    line-height: 2em;
+
+    color:white;
+
+    text-transform: uppercase;
+}
+
+#ejercicioJS p{
+    background: #123456;
+    padding: 2% 30%;
+    font-size: 30px;
+    text-transform: none;
+    line-height: 1.2em;
+}

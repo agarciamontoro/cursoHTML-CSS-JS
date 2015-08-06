@@ -1,0 +1,48 @@
+body{
+  font-family: 'Droid Sans', 'Helvetica', Arial, sans-serif;
+}
+
+#map{
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute; /* posición absoluta a navegador */
+  top: 0;      /* ajusta a borde de navegador */
+  left: 0;        /* ajusta a borde de navegador */
+  right: 0;
+  bottom: 0;
+  background: #456789; /* azul si no hay mapa */
+}
+
+#limpiar{
+    position: absolute;
+    z-index: 9999;
+    right: 10px;
+    top: 50px;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 100px;
+    border: 5px solid white;
+
+    background: #456789;
+    opacity: 0.5;
+
+    color: white;
+    font-size: 18px;
+}
+
+/* Cambio de color al pasar el ratón por encima */
+#limpiar:hover{
+    opacity: 1.0;
+}
+
+/* Eliminamos propiedad por defecto de Chrome que añade un borde feo a los botones pulsados */
+button:focus{
+    outline: none;
+}
+/* Eliminamos propiedad por defecto de Firefox que añade un borde feo a los botones pulsados */
+button::-moz-focus-inner {
+    border: 0;
+}

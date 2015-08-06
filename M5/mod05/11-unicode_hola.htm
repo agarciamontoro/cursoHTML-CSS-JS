@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>I18N</title>
+  <meta charset="UTF-8">
+</head><body>
+<h2>Ejemplo I18N</h2>
+Castellano, griego y chino: <p>
+<pre>
+<script type="text/javascript">
+  document.writeln('"hola, que tal": ' + "hola, que tal");
+  document.writeln("'hola, que tal': " + 'hola, que tal');
+  document.writeln();
+  document.writeln("En griego (Γεια σου, ίσως): " + 'Γεια σου, ίσως');
+  document.writeln();
+  document.writeln("'hola, que tal' en chino (嗨，你好吗): " + '嗨，你好吗');
+  document.writeln("Caracteres escapados (\\u55e8\\uff0c\\u4f60\\u597d\\u5417): " 
+                                       + "\u55e8\uff0c\u4f60\u597d\u5417");
+  document.writeln();
+  var x = '嗨，你好吗'.charCodeAt(0).toString(16); // conversión char a string hexadec.
+  var y = String.fromCharCode(parseInt(x, 16)); // conversión hexadecimal a string
+  document.writeln('El caracter escapado \\u' + x + ' representa: '+ y);
+</script>
+</pre>
+</body>
+</html>

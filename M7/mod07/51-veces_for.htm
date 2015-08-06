@@ -1,0 +1,22 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8">
+</head>
+<body>
+<h3>Función veces con for</h3>
+
+<script type="text/javascript">
+
+function veces (letra, frase) {
+  var i, n;  // inicialización, condición y final 
+  for ( i=0, n=0; i < frase.length; ++i ) {
+    if ( letra === frase[i]) { ++n; };    // acción
+  }
+  return n;
+};
+
+var l='a', f='la casa roja';
+document.write('La frase "' + f + '" tiene ' 
+	         + veces(l,f) + ' veces la letra ' + l);
+</script>
+</body>
+</html>

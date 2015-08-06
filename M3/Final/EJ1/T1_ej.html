@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Fondo de un div</title>
+    <style>
+
+        html, body {
+            height: 100%;
+            background-color: #456789;
+        }
+
+        .main {
+            height: 100%;
+            width: 100%;
+            display: table;
+        }
+        .wrapper {
+            display: table-cell;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        #demo {
+            width: 630px;
+            height: 630px;
+            margin: 0 auto;
+            background: url('IMGs/1424232593_clouds-cloud-128.png') left top repeat-x,
+                        url('IMGs/1424232187_grass.png') left bottom repeat-x,
+                        url('IMGs/1424231838_firefox-512.png') center bottom no-repeat ;
+            border: 50px solid white;
+            border-radius: 50% 50%;
+            box-shadow: 0 0 15px 15px #E66000;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="wrapper">
+            <div id="demo">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

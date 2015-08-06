@@ -1,0 +1,189 @@
+/**************************************************
+***************                     ***************
+***************  AJUSTES GENERALES  ***************
+***************                     ***************
+***************************************************/
+
+/* Añade la tipografía Digital para su uso en todo el CSS*/
+@font-face {
+    font-family: Digital;
+    src: url('digital-7.ttf') format("truetype");
+}
+
+/* Reseteamos valores */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajustes generales de tipografías y colores */
+body{
+    background: white;
+    font-family: Digital, sans-serif;
+    color: #42DF31;
+    text-align: center;
+}
+
+/**************************************************
+***************                     ***************
+***************  CONTENEDOR IMAGEN  ***************
+***************                     ***************
+***************************************************/
+
+/* Dimensiones máximas, adaptables a dispositivos más pequeños */
+#sistema{
+    max-width: 600px;
+    max-height: 600px;
+    margin: 2% auto 10px auto;
+    width: 100%;
+    position: relative; /* Necesario para la posición absoluta de sus hijos */
+}
+
+/* La imagen debe ocupar el 100% de #sistema, como mucho 600x600 */
+img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Ajustes del contador */
+#crono{
+    background: black;
+    border-radius: 5px;
+
+    font-size: 5em;
+    font-weight: normal;
+    text-align: center;
+    line-height: 0.8em; /* Posición vertical en el recuadro negro */
+
+    /* Posicionamiento absoluto. Números obtenidos a base de ensayo/error */
+    position: absolute;
+    width: 39.6%;
+    height: 19%;
+    top: 34.6%;
+    left: 29.5%;
+}
+
+/* Reducimos la tipografía del contador para dispositivos pequeños */
+@media only screen and (max-width:600px){
+    #crono{
+        font-size: 2.8em;
+    }
+}
+
+
+/**************************************************
+***************                     ***************
+***************  LISTA DE VUELTAS   ***************
+***************                     ***************
+***************************************************/
+
+/* Caja de 400px como máximo centrada en la página */
+#wrapper-vueltas{
+    background: black;
+
+    max-width: 400px;
+    padding: 15px;
+    margin: 20px auto;
+
+    border-radius: 40px;
+}
+
+/* Div que contiene sólo las vueltas. Centramos en #wrapper-vueltas
+esta caja algo más grande que la mitad de su padre (60%) y ponemos el
+texto alineado a la derecha para que el punto en todas las entradas
+esté en la misma posición horizontal, más o menos centrado */
+#vueltas{
+    width: 60%;
+    padding-right: 5%;
+    text-align: right;
+    font-size: 55px;
+    line-height: 0.9em;
+}
+
+/* Estilo del nombre "VUELTAS" que encabeza el recuadro negro */
+#wrapper-vueltas h1{
+    font-size: 60px;
+    font-weight: normal;
+
+    width: 60%;
+    padding-bottom: 10px;
+    margin: 10px auto;
+}
+
+/* Posicionamos de nuevo el texto de las vueltas,
+damos espacio al recuadro negro y reducimos el
+tamaño de la tipografía paradispositivos pequeños */
+@media only screen and (max-width:600px){
+    #vueltas{
+        width: 70%;
+    }
+
+    #wrapper-vueltas{
+        width: 80%;
+    }
+
+    #wrapper-vueltas h1{
+        font-size: 50px;
+    }
+}
+
+/**************************************************
+***************                     ***************
+***************       BOTONES       ***************
+***************                     ***************
+***************************************************/
+
+button{
+    border: white; /* Resetea estilos feos que tiene Firefox por defecto */
+
+    background: #B20604;
+    color: white;
+
+    border-radius: 50%;
+
+    font-family: Digital, sans-serif;
+    font-size: 10px;
+
+    /* Forma de óvalo */
+    width: 15%;
+    height: 30%;
+
+    /* Posicionamiento absoluto. Números obtenidos a base de ensayo/error */
+    position: absolute;
+    top: 34.5%;
+}
+
+/* Cambio de color al pasar el ratón por encima */
+button:hover{
+    background: #D42826;
+}
+
+/* Intercambiamos colores de fondo y tipografía mientras se está pulsando */
+button:active{
+    border: 2px solid #D42826;
+    color:#D42826;
+    background: white;
+}
+
+/* Eliminamos propiedad por defecto de Chrome que añade un borde feo a los botones pulsados */
+button:focus{
+    outline: none;
+}
+/* Eliminamos propiedad por defecto de Firefox que añade un borde feo a los botones pulsados */
+button::-moz-focus-inner {
+    border: 0;
+}
+
+/* Posición horizontal del botón de la derecha y rotación para
+encajar con el hueco del cronómetro */
+#cambiar{
+    right: 1%;
+    transform: rotate(6deg);
+}
+
+/* Posición horizontal del botón de la izquierda y rotación para
+encajar con el hueco del cronómetro */
+#inicializar{
+    left: 0;
+    transform: rotate(-6deg);
+}

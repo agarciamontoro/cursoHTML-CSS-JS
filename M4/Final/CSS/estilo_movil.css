@@ -1,0 +1,68 @@
+/***************************************************
+********************         ***********************
+******************** GENERAL ***********************
+********************         ***********************
+****************************************************/
+
+/* Aumentamos el ancho de todo el cuerpo */
+
+#wrapper{
+    max-width: 85%;
+}
+
+/***************************************************
+********************        ***********************
+******************** HEADER ***********************
+********************        ***********************
+***************************************************/
+
+/* Apilamos fotografía y título, para que quepa todo a lo ancho */
+
+header {
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+
+    -webkit-align-items: center;
+    align-items: center;
+
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+header>img{
+    margin-bottom: 20px;
+}
+
+/***************************************************
+*******************           **********************
+*******************  GALERIA  **********************
+*******************           **********************
+***************************************************/
+
+/* Hacemos la galería vertical y no flotante, de manera
+que todo quede en una sola columna */
+
+#galeria, #CV{
+    clear: both;
+    width: 100%;
+}
+
+#galeria {
+    margin-bottom: 40px;
+}
+
+#itemsGaleria {
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+}
+
+div.item {
+    width: 20%;
+    margin: 0 2% 2% 2%;
+}
+
+/* Como en un móvil no suele haber hover, aumentamos la opacidad para que se vea todo mejor */
+
+.itemObject{
+    opacity: 0.8;
+}
