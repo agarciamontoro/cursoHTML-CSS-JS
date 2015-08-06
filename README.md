@@ -18,9 +18,11 @@ La estructura del curso, y de los ejercicios resueltos en este repositorio, es l
 - **Módulo 10**. API de geolocalización HTML5. Proyecto final del curso basado en Google Maps.
 
 Este es un curso básico para no iniciados en el mundo web, y así son sus ejercicios y las soluciones que se encuentran en este repositorio.
-No esperes por tanto encontrar aquí grandes maravillas de programación web.
+No esperes por tanto encontrar aquí grandes maravillas de la programación.
 
 Sin embargo, queda aquí público por si a alguien pudiera servirle como primera toma de contacto con HTML, CSS y JavaScript.
+
+--------
 
 **NOTA**: Alguna de las soluciones están basadas en código que se encontraba disponible en el curso, y cuya licencia me es desconocida.
 Si encuentras código tuyo que no quieres que sea público, mándame un mensaje y lo eliminaré lo más pronto posible.
